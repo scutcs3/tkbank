@@ -1,0 +1,75 @@
+query questionData($titleSlug: String!) {
+    question(titleSlug: $titleSlug) {
+        questionId
+        questionFrontendId
+        categoryTitle
+        boundTopicId
+        title
+        titleSlug
+        content
+        translatedTitle
+        translatedContent
+        isPaidOnly
+        difficulty
+        likes
+        dislikes
+        isLiked
+        similarQuestions
+        contributors {
+            username
+            profileUrl
+            avatarUrl
+            __typename
+        }\
+        n langToValidPlayground
+        topicTags {
+            name
+            slug
+            translatedName
+            __typename
+        }\
+        n companyTagStats
+        codeSnippets {
+            lang
+            langSlug
+            code
+            __typename
+        }\
+        n stats
+        hints
+        solution {
+            id
+            canSeeDetail
+            __typename
+        }\
+        n status
+        sampleTestCase
+        metaData
+        judgerAvailable
+        judgeType
+        mysqlSchemas
+        enableRunCode
+        envInfo
+        book {
+            id
+            bookName
+            pressName
+            source
+            shortDescription
+            fullDescription
+            bookImgUrl
+            pressImgUrl
+            productUrl
+            __typename
+        }\
+        n isSubscribed
+        isDailyQuestion
+        dailyRecordStatus
+        editorType
+        ugcQuestionId
+        style
+        exampleTestcases
+        __typename
+    }\
+    n
+}
